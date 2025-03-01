@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <script src="JS/script.js" defer></script>
   </head>
   <body class="bg-gray-200">
     <!-- main section -->
@@ -29,10 +30,11 @@
           <!-- check + mark -->
           <div class="bg-gray-200 flex items-center gap-2 px-3 rounded-3xl">
             <img class="w-4 h-4" src="assets/checkbox.png" alt="checkbox" />
-            <div class="font-bold text-xl">23</div>
+            <div id="total-finished-task" class="font-bold text-xl">23</div>
           </div>
           <!-- color-icon -->
           <div
+            id="bg-color-changer"
             class="bg-gray-200 w-6 h-6 m-auto flex justify-center items-center text-center rounded-full"
           >
             <img
@@ -73,7 +75,8 @@
             <!-- blog-page-link-box -->
             <div
               id="blog-page-link"
-              class="bg-linear-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] px-4 py-2 flex items-center gap-2 rounded-lg"
+              onclick="goTo('blog.html')"
+              class="bg-linear-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] px-4 py-2 flex items-center gap-2 rounded-lg cursor-pointer"
             >
               <div
                 class="w-12 h-12 m-auto flex justify-center items-center text-center"
@@ -134,7 +137,8 @@
                   <p class="text-xs font-semibold">21 March 2025</p>
                 </div>
                 <button
-                  id="completed-btn"
+                  id="completed-btn-1"
+                  onclick="statusChange(1)"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -161,7 +165,7 @@
                   <p class="text-xs font-semibold">21 March 2025</p>
                 </div>
                 <button
-                  id="completed-btn"
+                  id="completed-btn-2"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -190,7 +194,7 @@
                   <p class="text-xs font-semibold">21 March 2025</p>
                 </div>
                 <button
-                  id="completed-btn"
+                  id="completed-btn-3"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -219,7 +223,7 @@
                   <p class="text-xs font-semibold">21 March 2025</p>
                 </div>
                 <button
-                  id="completed-btn"
+                  id="completed-btn-4"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -248,7 +252,7 @@
                   <p class="text-xs font-semibold">21 March 2025</p>
                 </div>
                 <button
-                  id="completed-btn"
+                  id="completed-btn-5"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -277,7 +281,7 @@
                   <p class="text-xs font-semibold">21 March 2025</p>
                 </div>
                 <button
-                  id="completed-btn"
+                  id="completed-btn-6"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -318,5 +322,6 @@
         </aside>
       </section>
     </div>
+    <!-- <script src="JS/script.js" defer></script> -->
   </body>
 </html>
