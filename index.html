@@ -50,7 +50,7 @@
         <!-- Task Board -->
         <div class="bg-white p-4 rounded-lg">
           <!-- task header -->
-          <header class="grid grid-cols-[23%_45%_23%] justify-between">
+          <header class="grid grid-cols-[23%_45%_28%] justify-between">
             <!-- assigned task -->
             <div
               class="bg-[#F4F7FF] px-4 py-2 flex items-center gap-2 rounded-lg"
@@ -59,7 +59,7 @@
                 class="bg-white w-6 h-6 m-auto flex justify-center items-center text-center rounded-full"
               >
                 <img
-                  class="object-cover w-3 h-3"
+                  class="object-cover w-4 h-4"
                   src="assets/checkbox.png"
                   alt="checkbox"
                 />
@@ -87,30 +87,25 @@
                   alt="board image"
                 />
               </div>
-              <p class="text-white font-semibold text-sm">
+              <p class="text-white font-semibold text-base">
                 Discover Something New Today!
               </p>
             </div>
             <!-- calender -->
             <div
-              class="bg-[#F4F7FF] px-4 py-2 flex items-center gap-2 rounded-lg"
+              id="calender"
+              class="bg-[#F4F7FF] px-5 py-2 flex justify-center items-center gap-2 rounded-lg"
             >
               <div
                 class="bg-white w-6 h-6 m-auto flex justify-center items-center text-center rounded-full"
               >
                 <img
-                  class="object-cover w-3 h-3"
+                  class="object-cover w-4 h-4"
                   src="assets/calender.png"
                   alt="checkbox"
                 />
               </div>
-              <!-- date -->
-              <div id="today">
-                <p class="text-sm text-gray-800">
-                  Wed,<br />
-                  <span class="font-bold text-sm">july 28 2025</span>
-                </p>
-              </div>
+              <!-- code comes from script -->
             </div>
           </header>
           <!-- task main -->
@@ -120,7 +115,7 @@
               <div class="bg-white inline-block font-normal text-sm px-4 py-2">
                 ShopEase
               </div>
-              <h1 class="font-bold text-base text-gray-600">
+              <h1 id="task-title-1" class="font-bold text-base text-gray-600">
                 Fix Mobile Button Issue
               </h1>
               <p
@@ -150,7 +145,9 @@
               <div class="bg-white inline-block font-normal text-sm px-4 py-2">
                 CloudSync
               </div>
-              <h1 class="font-bold text-base text-gray-600">Add Dark Mode</h1>
+              <h1 id="task-title-2" class="font-bold text-base text-gray-600">
+                Add Dark Mode
+              </h1>
               <p
                 class="bg-white p-3 text-sm text-gray-400 h-14 overflow-hidden"
               >
@@ -166,6 +163,7 @@
                 </div>
                 <button
                   id="completed-btn-2"
+                  onclick="statusChange(2)"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -177,7 +175,7 @@
               <div class="bg-white inline-block font-normal text-sm px-4 py-2">
                 SwiftPay
               </div>
-              <h1 class="font-bold text-base text-gray-600">
+              <h1 id="task-title-3" class="font-bold text-base text-gray-600">
                 Optimize Home Page
               </h1>
               <p
@@ -195,6 +193,7 @@
                 </div>
                 <button
                   id="completed-btn-3"
+                  onclick="statusChange(3)"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -206,7 +205,7 @@
               <div class="bg-white inline-block font-normal text-sm px-4 py-2">
                 Meta
               </div>
-              <h1 class="font-bold text-base text-gray-600">
+              <h1 id="task-title-4" class="font-bold text-base text-gray-600">
                 Add new emoji 🤲
               </h1>
               <p
@@ -224,6 +223,7 @@
                 </div>
                 <button
                   id="completed-btn-4"
+                  onclick="statusChange(4)"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -235,7 +235,7 @@
               <div class="bg-white inline-block font-normal text-sm px-4 py-2">
                 Google LLC
               </div>
-              <h1 class="font-bold text-base text-gray-600">
+              <h1 id="task-title-5" class="font-bold text-base text-gray-600">
                 Integrate OpenAI API
               </h1>
               <p
@@ -253,6 +253,7 @@
                 </div>
                 <button
                   id="completed-btn-5"
+                  onclick="statusChange(5)"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -264,7 +265,7 @@
               <div class="bg-white inline-block font-normal text-sm px-4 py-2">
                 Glassdoor
               </div>
-              <h1 class="font-bold text-base text-gray-600">
+              <h1 id="task-title-6" class="font-bold text-base text-gray-600">
                 Improve Job Searching
               </h1>
               <p
@@ -282,6 +283,7 @@
                 </div>
                 <button
                   id="completed-btn-6"
+                  onclick="statusChange(6)"
                   class="bg-[#3752FD] text-white font-medium text-xs px-2 py-1 rounded-md cursor-pointer"
                 >
                   Completed
@@ -292,7 +294,7 @@
         </div>
 
         <!-- Activity Log -->
-        <aside class="bg-white p-4 rounded-lg">
+        <aside class="bg-white py-4 px-3 rounded-lg">
           <header class="mb-4">
             <div
               class="mb-2 flex justify-center items-center text-center gap-1"
@@ -309,7 +311,7 @@
               <p class="font-medium text-gray-600 text-sm">Activity Log</p>
             </div>
             <button
-              id="clearHistory-btn"
+              onclick="clearHistory()"
               class="bg-[#3752FD] text-white font-medium text-xs px-3 py-1 rounded-md cursor-pointer"
             >
               Clear History
