@@ -38,17 +38,18 @@
       <!-- qna-1 -->
       <div class="bg-white px-4 my-3">
         <h2 class="py-2 font-semibold text-base">
-          Question-2: What is the difference between innerHTML, innerText, and
-          textContent ?
+          Question-1: What are the different ways to select an element in the
+          DOM?
         </h2>
         <hr class="opacity-30" />
         <p class="py-2 font-semibold text-base opacity-50">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In cupiditate
-          molestiae architecto? Iusto tempore nam itaque in iste culpa quas.
-          lore ipsum dolor
+          Different ways to select an element in the DOM: using
+          document.getElementby..ID/className/TagName(),<br />
+          using document.querySelector('') for single matching element,<br />
+          and querySelectorAll('') for multiple matching elements.
         </p>
       </div>
-      <!-- qna-1 -->
+      <!-- qna-2 -->
       <div class="bg-white px-4 my-3">
         <h2 class="py-2 font-semibold text-base">
           Question-2: What is the difference between innerHTML, innerText, and
@@ -56,9 +57,52 @@
         </h2>
         <hr class="opacity-30" />
         <p class="py-2 font-semibold text-base opacity-50">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In cupiditate
-          molestiae architecto? Iusto tempore nam itaque in iste culpa quas.
-          lore ipsum dolor
+          .innerHTML returns full content with html element and text and hidden
+          element and text .innerText only returns visible text content of the
+          selected html element. And textContent returns visible and hidden text
+          both.
+        </p>
+      </div>
+      <!-- qna-3 -->
+      <div class="bg-white px-4 my-3">
+        <h2 class="py-2 font-semibold text-base">
+          Question-3: What is event delegation in the DOM?
+        </h2>
+        <hr class="opacity-30" />
+        <p class="py-2 font-semibold text-base opacity-50">
+          In the case of multiple child's event of a Parent element, Instead of
+          adding event listeners to multiple child elements, i can attach one
+          event listener to a parent and detect which child fired the event
+          using event.target.(id or className). it is called event delegation
+        </p>
+      </div>
+      <!-- qna-4 -->
+      <div class="bg-white px-4 my-3">
+        <h2 class="py-2 font-semibold text-base">
+          Question-4: What is event bubbling in the DOM?
+        </h2>
+        <hr class="opacity-30" />
+        <p class="py-2 font-semibold text-base opacity-50">
+          Event bubbling means when an event happens on a child element, it also
+          fires the event on its parent(s) if there are any event attached
+          previously in parent element. to stop event bubbling,
+          event.stopPropagation() or event.stopImmediatePropagation() are used
+          as per needed.
+        </p>
+      </div>
+      <!-- qna-5 -->
+      <div class="bg-white px-4 my-3">
+        <h2 class="py-2 font-semibold text-base">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </h2>
+        <hr class="opacity-30" />
+        <p class="py-2 font-semibold text-base opacity-50">
+          i will -- create an element using:
+          document.createElement("element"),<br />
+          add an element using:
+          document.(parentElement).appendChild(created-element),<br />
+          remove an element using: created-element.remove()
         </p>
       </div>
     </div>
